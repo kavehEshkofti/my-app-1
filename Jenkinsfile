@@ -1,11 +1,19 @@
-node{
-    stage('SCM Checkout'){
-      steps {
+pipeline {
+    
+    stages {
+        stage('SCM Checkout') {
+            steps {
                 git branch: 'main', 
                     url: 'https://github.com/kavehEshkofti/my-app-1.git'
             }
+        }
+        
+        stage('Build with Maven') {
+            steps {
+                sh 'mvn package'
+            }
+        }
+        
     }
-    stage('Compile-Package'){
-      sh 'mvn package'
-    }
+
 }
