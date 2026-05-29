@@ -16,6 +16,13 @@ pipeline {
                 }
             }
         }
+        stage('Email'){
+            steps{
+                script{
+                    mail bcc: '', body: 'Hello world', cc: '', from: '', replyTo: '', subject: 'job', to: 'kaveh_eshkofti@yahoo.com'
+                }
+            }
+        }
         
     }
 
