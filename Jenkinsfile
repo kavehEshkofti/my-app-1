@@ -1,9 +1,3 @@
-   
-   stage('Email Notification'){
-      mail bcc: '', body: 'Hello world', cc: '', from: '', replyTo: '', subject: 'job', to: 'kaveh_eshkofti@yahoo.com'
-   }
-}
-
 pipeline {
     agent any
     stages {
